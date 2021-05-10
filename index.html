@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
       rel="stylesheet"
@@ -13,19 +14,40 @@
     <title>Quizy</title>
   </head>
   <body>
-    <div class="head-container">
+    
+    <div class="head-container hide">
       <div class="header-container">
         <img class="header-logo" src="./assets/Logo.svg" />
         <p class="header-text">Quizy</p>
       </div>
 
       <div class="button-cla">
-       <button type="button" class="nextbtn">Lets Get Quizy</button>
+        <button type="button" class="nextbtn">Lets Get Quizy</button>
       </div>
     </div>
 
-    <div class="rules-container hide">
-      This should appear on btn click
+    <div class="rules-container">
+      <div class="rule-box">
+        <div class="rule-title">
+          <p>Instructions</p>
+        </div>
+        <div class="instructions">
+          <ul>
+            <li>There will be a Total of 10 Question related to Javascript</li>
+            <li>Your Total point will be displayed at the end of the quiz only</li>
+            <li>Once attempted question will not be available for a reattemp</li>
+            <li>Each question carries 4 options</li>
+            <li>No points will be deducted for wrong answer</li>
+            <li>Once the page is refreshed all your progress will be lost</li>
+            <li>There is no time limit so take your own time</li>
+            <li>Once you are ready you can start the quiz by click the Start button</li>
+          </ul>
+        </div>
+
+        <div class="start-btn">
+          <button type="button" class="startbtn">Start</button>
+        </div>
+      </div>
     </div>
 
     <script src="./script.js"></script>
