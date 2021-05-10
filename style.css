@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.header-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20vh;
+    
+}
+.header-text{
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+
+.header-logo{
+    height: 16rem;
+}
+
