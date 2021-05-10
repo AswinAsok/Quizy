@@ -8,20 +8,34 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
-.header-container{
+.main-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin-top: 20vh;
-    
-}
-.header-text{
-    font-size: 3.5rem;
-    font-weight: 500;
+    margin-top: 18vh;
 }
 
-.header-logo{
-    height: 16rem;
+.button-cla{
+    margin-top: 1.2rem;
+}
+.header-text {
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+
+.header-logo {
+  height: 16rem;
+}
+
+.nextbtn{
+    background-color: #403F4C;
+    color: #5FBB97;
+    padding: 13px;
+    width: 15rem;
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.15rem;
 }
 
