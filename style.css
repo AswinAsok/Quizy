@@ -6,14 +6,20 @@
 
 body {
   font-family: "Ubuntu", sans-serif;
+  min-height: 100vh;
 }
 
-.main-container{
+.head-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     margin-top: 18vh;
+    
+}
+
+.hide{
+  display: none;
 }
 
 .button-cla{
