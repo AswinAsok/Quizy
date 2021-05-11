@@ -157,3 +157,22 @@ li {
   background-color: #121420;
   color: #5FBB97;
 }
+
+.points-box{
+  margin-top: 18vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.winner-logo{
+  height: 18rem;
+  width: 90vw;
+  margin: 1rem;
+}
+
+.point-text{
+  font-size: 2rem;
+  text-align: center;
+}
