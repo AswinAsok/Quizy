@@ -23,6 +23,8 @@ startbtn.addEventListener("click", hiderules);
 
 var index = 0;
 var data;
+var total = 0;
+var same_question;
 
 // -------- API Call Start --------
 
@@ -38,6 +40,7 @@ async function getdata(url) {
 
 const nextquestion = () => {
   index++;
+  same_question = false;
 
   // ---------------- Add Question Start ----------------
 
@@ -125,6 +128,16 @@ const nextquestion = () => {
 };
 
 const calculate = (user_choice) => {
-  const answeris = Object.values(data[index-1].correct_answers)[user_choice-1]
-  console.log(answeris)
+  const answeris = Object.values(data[index - 1].correct_answers)[
+    user_choice - 1
+  ];
+  if (answeris == "true" && !same_question) {
+    total++;
+    same_question = true;
+  }
+  if (answeris == "false" && same_question) {
+    total--;
+    same_question = null;
+  }
+  console.log(total);
 };
