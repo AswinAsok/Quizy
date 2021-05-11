@@ -117,6 +117,7 @@ li {
   flex-direction: column;
   margin-top: 1.5rem;
   align-items: center;
+  text-align: center;
   
 }
 
@@ -124,7 +125,8 @@ li {
 .option-2,
 .option-3,
 .option-4 {
-  min-width: 21rem;
+  text-align: center;
+  min-width: 25rem;
   border: 0;
   font-size: 0.9rem;
   background-color: #5fbb97;
@@ -132,7 +134,6 @@ li {
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
-  text-align: left;
 }
 
 .next-question {

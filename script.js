@@ -15,12 +15,13 @@ const api_url = `https://quizapi.io/api/v1/questions?apiKey=Ki3fX8OZk4uB81gflPqh
 const hiderules = () => {
   startbtn.parentElement.parentElement.parentElement.classList.add("hide");
   questionscontainer.classList.remove("hide");
+
   getdata(api_url);
 };
 
 startbtn.addEventListener("click", hiderules);
 
-//-------------- Global Varibles---------
+//--------- Global Varibles--------
 
 var index = 0;
 var data;
@@ -35,16 +36,16 @@ async function getdata(url) {
   nextquestion();
 }
 
-// -------- API Call Start End --------
-
-
+// -------- API Call End --------
 
 const nextquestion = () => {
   index++;
 
   // ---------------- Add Question Start ----------------
 
-  const questions_container_html = document.querySelector(".questions-container");
+  const questions_container_html = document.querySelector(
+    ".questions-container"
+  );
   questions_container_html.innerHTML = "";
 
   var questions_container = document.querySelector(".questions-container");
@@ -112,4 +113,7 @@ const nextquestion = () => {
 
   // ---------------- Add Question End ----------------
 
+  //----------------- Calculate Points Start ----------------
+
+  //----------------- Calculate Points End ----------------
 };
