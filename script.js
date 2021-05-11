@@ -43,6 +43,16 @@ async function getdata(url) {
 // -------- API Call End --------
 
 const nextquestion = () => {
+  if (index >= 10) {
+    questionscontainer.classList.add("hide")
+    const points_container = document.querySelector(".points-container");
+    points_container.classList.remove("hide")
+
+    const point_text = document.querySelector(".point-text")
+    point_text.innerText = total+" Points"
+    return;
+  }
+
   index++;
   same_question = false;
 
@@ -132,21 +142,17 @@ const nextquestion = () => {
 };
 
 const calculate = (user_choice, button) => {
-
   if (opbtn1 && opbtn1.classList.contains("choosen")) {
     opbtn1.classList.remove("choosen");
-  }
-   else if (opbtn2 && opbtn2.classList.contains("choosen")) {
+  } else if (opbtn2 && opbtn2.classList.contains("choosen")) {
     opbtn2.classList.remove("choosen");
-  } 
-  else if (opbtn3 && opbtn3.classList.contains("choosen")) {
+  } else if (opbtn3 && opbtn3.classList.contains("choosen")) {
     opbtn3.classList.remove("choosen");
-  }
-   else if (opbtn4 && opbtn4.classList.contains("choosen")) {
+  } else if (opbtn4 && opbtn4.classList.contains("choosen")) {
     opbtn4.classList.remove("choosen");
   }
 
-  button.classList.add("choosen")
+  button.classList.add("choosen");
 
   const answeris = Object.values(data[index - 1].correct_answers)[
     user_choice - 1
@@ -159,5 +165,7 @@ const calculate = (user_choice, button) => {
     total--;
     same_question = null;
   }
-  console.log(total);
+
+
 };
+
