@@ -39,6 +39,9 @@ const addquestion = (data, index) => {
   question_box.classList.add("question-box");
   questions_container.appendChild(question_box);
 
+  const q_box = document.createElement("div")
+  q_box.classList.add("q")
+
   const questions = document.createElement("div");
   questions.classList.add("questions");
   question_box.appendChild(questions);

@@ -96,7 +96,6 @@ li {
   align-items: center;
 }
 
-
 .questions {
   background-color: #403f4c;
   color: #5fbb97;
@@ -118,19 +117,20 @@ li {
   flex-direction: column;
   margin-top: 1.5rem;
   align-items: center;
+  
 }
 
 .option-1,
 .option-2,
 .option-3,
 .option-4 {
+  min-width: 21rem;
   border: 0;
+  font-size: 0.9rem;
   background-color: #5fbb97;
   color: #403f4c;
   margin: 10px;
-  font-size: 1rem;
-  padding: 0.9rem;
-  width: 70%;
+  padding: 10px;
   border-radius: 10px;
   text-align: left;
 }
