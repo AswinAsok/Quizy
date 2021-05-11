@@ -15,10 +15,8 @@ const api_url = `https://quizapi.io/api/v1/questions?apiKey=Ki3fX8OZk4uB81gflPqh
 const hiderules = () => {
   startbtn.parentElement.parentElement.parentElement.classList.add("hide");
   questionscontainer.classList.remove("hide");
-
-  getdata(api_url);
 };
-
+getdata(api_url);
 startbtn.addEventListener("click", hiderules);
 
 //--------- Global Varibles--------
@@ -76,6 +74,9 @@ const nextquestion = () => {
       const opbtn1 = document.createElement("button");
       opbtn1.innerText = data[index - 1].answers.answer_a;
       opbtn1.classList.add("option-1");
+      opbtn1.onclick = () => {
+        calculate("1");
+      };
       options.appendChild(opbtn1);
     }
 
@@ -83,6 +84,9 @@ const nextquestion = () => {
       const opbtn2 = document.createElement("button");
       opbtn2.innerText = data[index - 1].answers.answer_b;
       opbtn2.classList.add("option-2");
+      opbtn2.onclick = () => {
+        calculate("2");
+      };
       options.appendChild(opbtn2);
     }
 
@@ -90,6 +94,9 @@ const nextquestion = () => {
       const opbtn3 = document.createElement("button");
       opbtn3.innerText = data[index - 1].answers.answer_c;
       opbtn3.classList.add("option-3");
+      opbtn3.onclick = () => {
+        calculate("3");
+      };
       options.appendChild(opbtn3);
     }
 
@@ -97,6 +104,9 @@ const nextquestion = () => {
       const opbtn4 = document.createElement("button");
       opbtn4.innerText = data[index - 1].answers.answer_d;
       opbtn4.classList.add("option-4");
+      opbtn4.onclick = () => {
+        calculate("4");
+      };
       options.appendChild(opbtn4);
     }
 
@@ -112,8 +122,9 @@ const nextquestion = () => {
   }
 
   // ---------------- Add Question End ----------------
+};
 
-  //----------------- Calculate Points Start ----------------
-
-  //----------------- Calculate Points End ----------------
+const calculate = (user_choice) => {
+  const answeris = Object.values(data[index-1].correct_answers)[user_choice-1]
+  console.log(answeris)
 };
