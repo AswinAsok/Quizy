@@ -89,26 +89,17 @@ li {
 }
 
 /* --------------- Questions --------------- */
-.questions-container{
-  margin-top: 8rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+.question-box {
+  display: flex;
+  margin-top: 18vh;
   flex-direction: column;
   align-items: center;
-  
 }
 
-.questions-box {
-  display: flex;
-  flex-direction: column;
-  margin-top: 5rem;
-  justify-content: center;
-  align-items: center;
-}
 
 .questions {
-  background-color: #5fbb97;
-  color: #403f4c;
+  background-color: #403f4c;
+  color: #5fbb97;
   border: 0;
   min-height: 40vh;
   border-radius: 20px;
@@ -134,8 +125,8 @@ li {
 .option-3,
 .option-4 {
   border: 0;
-  background-color: #403f4c;
-  color: #5fbb97;
+  background-color: #5fbb97;
+  color: #403f4c;
   margin: 10px;
   font-size: 1rem;
   padding: 0.9rem;
@@ -148,11 +139,9 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
-
-.nextq-btn{
+.nextq-btn {
   background-color: #403f4c;
   color: #5fbb97;
   padding: 13px;
