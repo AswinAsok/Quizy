@@ -81,6 +81,16 @@ const addquestion = (data, index) => {
       opbtn4.classList.add("option-4");
       options.appendChild(opbtn4);
     }
+
+    const next_question = document.createElement("div");
+    next_question.classList.add("next-question");
+    questions_container.appendChild(next_question);
+
+    const nextq_btn = document.createElement("button");
+    nextq_btn.classList.add("nextq-btn");
+    nextq_btn.innerText = "Next Question";
+    nextq_btn.onclick = nextquestion;
+    next_question.appendChild(nextq_btn);
   }
 };
 
