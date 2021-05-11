@@ -10,37 +10,51 @@ nextbtn.addEventListener("click", hideheader);
 
 const startbtn = document.querySelector(".startbtn");
 const questionscontainer = document.querySelector(".questions-container");
-const api_url = `https://quizapi.io/api/v1/questions?apiKey=VAa9sQhkjH5GUnCLeqG3xTo4rqUEz7Z0gFhi0ZaX&limit=10&tags=javascript`;
+const api_url = `https://quizapi.io/api/v1/questions?apiKey=Ki3fX8OZk4uB81gflPqhJAA9kyp0bdOuRnsyyTNm&limit=10&tags=javascript`;
 
 const hiderules = () => {
   startbtn.parentElement.parentElement.parentElement.classList.add("hide");
   questionscontainer.classList.remove("hide");
+  getdata(api_url);
 };
-getdata(api_url);
+
 startbtn.addEventListener("click", hiderules);
 
-var question_number = 0;
+//-------------- Global Varibles---------
 
-// -------- API Call --------
+var index = 0;
+var data;
+
+// -------- API Call Start --------
+
 async function getdata(url) {
   const response = await fetch(url);
-  question_number += 1;
-  var data = await response.json();
+  data = await response.json();
   console.log(data);
-  addquestion(data, question_number);
+
+  nextquestion();
 }
 
-// --------- Adding Question ------
+// -------- API Call Start End --------
 
-const addquestion = (data, index) => {
-  const questions_container = document.querySelector(".questions-container");
 
-  const question_box = document.createElement("div");
+
+const nextquestion = () => {
+  index++;
+
+  // ---------------- Add Question Start ----------------
+
+  const questions_container_html = document.querySelector(".questions-container");
+  questions_container_html.innerHTML = "";
+
+  var questions_container = document.querySelector(".questions-container");
+
+  var question_box = document.createElement("div");
   question_box.classList.add("question-box");
   questions_container.appendChild(question_box);
 
-  const q_box = document.createElement("div")
-  q_box.classList.add("q")
+  const q_box = document.createElement("div");
+  q_box.classList.add("q");
 
   const questions = document.createElement("div");
   questions.classList.add("questions");
@@ -95,10 +109,7 @@ const addquestion = (data, index) => {
     nextq_btn.onclick = nextquestion;
     next_question.appendChild(nextq_btn);
   }
-};
 
-const nextquestion = () => {
-  getdata(api_url);
-  const questions_container = document.querySelector(".questions-container");
-  questions_container.innerHTML = "";
+  // ---------------- Add Question End ----------------
+
 };
