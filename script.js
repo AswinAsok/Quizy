@@ -25,6 +25,10 @@ var index = 0;
 var data;
 var total = 0;
 var same_question;
+var opbtn1;
+var opbtn2;
+var opbtn3;
+var opbtn4;
 
 // -------- API Call Start --------
 
@@ -74,41 +78,41 @@ const nextquestion = () => {
     main_question.innerHTML = index + "). " + data[index - 1].question;
 
     if (data[index - 1].answers.answer_a !== null) {
-      const opbtn1 = document.createElement("button");
+      opbtn1 = document.createElement("button");
       opbtn1.innerText = data[index - 1].answers.answer_a;
       opbtn1.classList.add("option-1");
       opbtn1.onclick = () => {
-        calculate("1");
+        calculate("1", opbtn1);
       };
       options.appendChild(opbtn1);
     }
 
     if (data[index - 1].answers.answer_b !== null) {
-      const opbtn2 = document.createElement("button");
+      opbtn2 = document.createElement("button");
       opbtn2.innerText = data[index - 1].answers.answer_b;
       opbtn2.classList.add("option-2");
       opbtn2.onclick = () => {
-        calculate("2");
+        calculate("2", opbtn2);
       };
       options.appendChild(opbtn2);
     }
 
     if (data[index - 1].answers.answer_c !== null) {
-      const opbtn3 = document.createElement("button");
+      opbtn3 = document.createElement("button");
       opbtn3.innerText = data[index - 1].answers.answer_c;
       opbtn3.classList.add("option-3");
       opbtn3.onclick = () => {
-        calculate("3");
+        calculate("3", opbtn3);
       };
       options.appendChild(opbtn3);
     }
 
     if (data[index - 1].answers.answer_d !== null) {
-      const opbtn4 = document.createElement("button");
+      opbtn4 = document.createElement("button");
       opbtn4.innerText = data[index - 1].answers.answer_d;
       opbtn4.classList.add("option-4");
       opbtn4.onclick = () => {
-        calculate("4");
+        calculate("4", opbtn4);
       };
       options.appendChild(opbtn4);
     }
@@ -127,7 +131,23 @@ const nextquestion = () => {
   // ---------------- Add Question End ----------------
 };
 
-const calculate = (user_choice) => {
+const calculate = (user_choice, button) => {
+
+  if (opbtn1 && opbtn1.classList.contains("choosen")) {
+    opbtn1.classList.remove("choosen");
+  }
+   else if (opbtn2 && opbtn2.classList.contains("choosen")) {
+    opbtn2.classList.remove("choosen");
+  } 
+  else if (opbtn3 && opbtn3.classList.contains("choosen")) {
+    opbtn3.classList.remove("choosen");
+  }
+   else if (opbtn4 && opbtn4.classList.contains("choosen")) {
+    opbtn4.classList.remove("choosen");
+  }
+
+  button.classList.add("choosen")
+
   const answeris = Object.values(data[index - 1].correct_answers)[
     user_choice - 1
   ];
