@@ -33,6 +33,11 @@ var question_no = 1;
 
 const main_question = document.querySelector(".main-question");
 const options = document.querySelector(".options");
+
+
+
+
+
 const addquestion = (data) => {
   if (data) {
     main_question.innerHTML =
@@ -67,3 +72,5 @@ const addquestion = (data) => {
     }
   }
 };
+
+
