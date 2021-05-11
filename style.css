@@ -126,7 +126,7 @@ li {
 .option-3,
 .option-4 {
   text-align: center;
-  min-width: 28rem;
+  width: 20rem;
   border: 0;
   font-size: 0.9rem;
   background-color: #5fbb97;
