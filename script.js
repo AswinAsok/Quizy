@@ -32,25 +32,36 @@ var opbtn1;
 var opbtn2;
 var opbtn3;
 var opbtn4;
+var time;
 
 // -------- API Call Start --------
 
 async function getdata(url) {
   const response = await fetch(url);
   data = await response.json();
-  console.log(data);
-
   nextquestion();
 }
 
 // -------- API Call End --------
 
+const setTimer = () => {
+  var interval = setInterval(() => {
+    time -= 1;
+    if (time == 0) {
+      clearInterval(interval);
+      nextquestion();
+    }
+  }, 1000);
+};
+
 const nextquestion = () => {
+  time = 16;
+  setTimer();
   if (index >= 10) {
     questionscontainer.classList.add("hide");
     const points_container = document.querySelector(".points-container");
     points_container.classList.remove("hide");
-    points_container.classList.add("w3-animate-opacity")
+    points_container.classList.add("w3-animate-opacity");
 
     const point_text = document.querySelector(".point-text");
     point_text.innerText = total + " Points";
@@ -73,6 +84,14 @@ const nextquestion = () => {
   question_box.classList.add("question-box");
   question_box.classList.add("w3-animate-opacity");
   questions_container.appendChild(question_box);
+
+  var timer = document.createElement("div");
+  timer.classList.add("timer");
+  setInterval(() => {
+    timer.innerText = time;
+  }, 1000);
+
+  question_box.appendChild(timer);
 
   const q_box = document.createElement("div");
   q_box.classList.add("q");
@@ -138,7 +157,6 @@ const nextquestion = () => {
     questions_container.appendChild(next_question);
 
     const nextq_btn = document.createElement("button");
-
     nextq_btn.classList.add("nextq-btn");
     if (index <= 9) {
       nextq_btn.innerText = "Next Question";
@@ -184,7 +202,6 @@ javascript_btn.onclick = () => {
   highlight_cate();
   category = "javascript";
   javascript_btn.classList.add("choosen");
-  console.log(javascript_btn)
 };
 
 const html_btn = document.querySelector(".chtml");
@@ -204,11 +221,9 @@ linux_btn.onclick = () => {
 const highlight_cate = () => {
   if (javascript_btn && javascript_btn.classList.contains("choosen")) {
     javascript_btn.classList.remove("choosen");
-  }
-  else if (html_btn && html_btn.classList.contains("choosen")) {
+  } else if (html_btn && html_btn.classList.contains("choosen")) {
     html_btn.classList.remove("choosen");
-  }
-  else if (linux_btn && linux_btn.classList.contains("choosen")) {
+  } else if (linux_btn && linux_btn.classList.contains("choosen")) {
     linux_btn.classList.remove("choosen");
   }
 };
