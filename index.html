@@ -15,7 +15,7 @@
     <title>Quizy</title>
   </head>
   <body>
-    <div class="head-container w3-animate-opacity">
+    <div class="head-container w3-animate-opacity hide">
       <div class="header-container">
         <img class="header-logo" src="./assets/Logo.svg" />
         <p class="header-text">Quizy</p>
@@ -26,14 +26,16 @@
       </div>
     </div>
 
-    <div class="rules-container hide">
+    <div class="rules-container">
       <div class="rule-box">
         <div class="rule-title">
           <p>Instructions</p>
         </div>
         <div class="instructions">
           <ul>
-            <li>There will be a Total of <b>10 Question</b> related to Javascript</li>
+            <li>
+              There will be a Total of <b>10 Question</b> related to Javascript
+            </li>
             <li>
               Your Total Points will be displayed at the end of the Quiz only
             </li>
@@ -42,14 +44,29 @@
             </li>
             <li>All the Questions will be having <b>Multiple Choice</b></li>
             <li><b>Points will not be deducted</b> for Wrong answer</li>
-            <li>Once the page is refreshed all your <b>Progress will be lost</b></li>
-            <li>There is <b>No Time Limit</b> so take your own time</li>
-            <li><b>Un-Attempted Question</b> will be awarded <b>0 points</b></li>
             <li>
-              Once you are ready you can start the quiz by click the<b> Start
-                Button</b>
+              Once the page is refreshed all your <b>Progress will be lost</b>
+            </li>
+            <li>There is <b>No Time Limit</b> so take your own time</li>
+            <li>
+              <b>Un-Attempted Question</b> will be awarded <b>0 points</b>
+            </li>
+            <li>
+              Once you are ready you can start the quiz by click the<b>
+                Start Button</b
+              >
             </li>
           </ul>
+        </div>
+
+        <div class="category">
+          <button class="category-btn cjs" value="JavaScript" type="button">
+           JavaScript
+          </button>
+          <button class="category-btn chtml" value="html" type="button">HTML</button>
+          <button class="category-btn clinux" value="Linux" type="button">
+            Linux
+          </button>
         </div>
 
         <div class="start-btn">
@@ -74,9 +91,10 @@
           as a part of <i>Skillathon by WIT - IET On Campus CET</i>
         </p>
         <div class="source-code">
-        <a href="https://github.com/AswinAsok/Quizy">👨‍💻Take a look at the Source Code</a>
+          <a href="https://github.com/AswinAsok/Quizy"
+            >👨‍💻Take a look at the Source Code</a
+          >
         </div>
-
       </div>
     </div>
 

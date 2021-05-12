@@ -9,15 +9,17 @@ const hideheader = () => {
 
 nextbtn.addEventListener("click", hideheader);
 
+var category = "javascript";
 const startbtn = document.querySelector(".startbtn");
 const questionscontainer = document.querySelector(".questions-container");
-const api_url = `https://quizapi.io/api/v1/questions?apiKey=Ki3fX8OZk4uB81gflPqhJAA9kyp0bdOuRnsyyTNm&limit=10&tags=javascript`;
 
 const hiderules = () => {
+  const api_url = `https://quizapi.io/api/v1/questions?apiKey=Ki3fX8OZk4uB81gflPqhJAA9kyp0bdOuRnsyyTNm&limit=10&tags=${category}`;
   startbtn.parentElement.parentElement.parentElement.classList.add("hide");
   questionscontainer.classList.remove("hide");
+  getdata(api_url);
 };
-getdata(api_url);
+
 startbtn.addEventListener("click", hiderules);
 
 //--------- Global Varibles--------
@@ -135,11 +137,11 @@ const nextquestion = () => {
     questions_container.appendChild(next_question);
 
     const nextq_btn = document.createElement("button");
-  
+
     nextq_btn.classList.add("nextq-btn");
     if (index <= 9) {
       nextq_btn.innerText = "Next Question";
-    }else{
+    } else {
       nextq_btn.innerText = "Submit";
     }
     nextq_btn.onclick = nextquestion;
@@ -173,4 +175,18 @@ const calculate = (user_choice, button) => {
     total--;
     same_question = null;
   }
+};
+
+// -------- Category Buttons----------
+const javascript_btn = document.querySelector(".cjs");
+javascript_btn.onclick = () => {
+  category = "javascript";
+};
+const html_btn = document.querySelector(".chtml");
+html_btn.onclick = () => {
+  category = "html";
+};
+const linux_btn = document.querySelector(".clinux");
+linux_btn.onclick = () => {
+  category = "linux";
 };

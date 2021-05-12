@@ -89,6 +89,20 @@ li {
   margin-bottom: 2.5rem;
 }
 
+.category-btn {
+  background-color: #5fbb97;
+  color: #403f4c;
+  width: 6rem;
+  height: 3rem;
+  text-align: center;
+  border: 0;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  justify-content: center;
+}
+
 /* --------------- Questions --------------- */
 .question-box {
   display: flex;
@@ -158,7 +172,7 @@ li {
   color: #5fbb97;
 }
 
-.points-container{
+.points-container {
   margin-top: 12vh;
 }
 
@@ -167,7 +181,6 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .winner-logo {
@@ -185,16 +198,16 @@ li {
 .developer {
   text-align: center;
   font-weight: 500;
-  margin-top: 2px ;
+  margin-top: 2px;
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
-.source-code{
+.source-code {
   margin-top: 15px;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
