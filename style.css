@@ -6,6 +6,7 @@
 
 body {
   font-family: "Ubuntu", sans-serif;
+  background-color: #D4DCFF
 }
 
 button {
@@ -187,7 +188,7 @@ li {
 }
 
 .choosen {
-  background-color: #121420;
+  background-color: #1B2432;
   color: #5fbb97;
 }
 
