@@ -12,7 +12,6 @@ button {
   outline: none;
 }
 
-
 .head-container {
   display: flex;
   flex-direction: column;
@@ -53,15 +52,16 @@ button {
 }
 
 /* ------------Rules CSS------------- */
+
 .rule-box {
   background-color: #403f4c;
   color: #5fbb97;
-  
   margin: 1rem;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 90vh;
 }
 
 .rule-title {
@@ -71,7 +71,7 @@ button {
 
 .instructions {
   margin: 1rem;
-  border-bottom: 1px solid #5FBB97;
+  border-bottom: 1px solid #5fbb97;
 }
 
 li {
@@ -94,7 +94,7 @@ li {
 .category-btn {
   background-color: #5fbb97;
   color: #403f4c;
-  width: 7rem;
+  width: 6.5rem;
   height: 3rem;
   text-align: center;
   border: 0;
@@ -102,22 +102,20 @@ li {
   cursor: pointer;
   font-size: 1rem;
   margin: 0.1rem;
-  
   justify-content: center;
 }
 
-.category{
+.category {
   display: flex;
   flex-direction: column;
-  
   margin-bottom: 2.5rem;
   justify-content: center;
   align-items: center;
   padding-bottom: 2rem;
-  border-bottom: 1px solid #5FBB97;
+  border-bottom: 1px solid #5fbb97;
 }
 
-.category-title{
+.category-title {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
 }
@@ -167,12 +165,14 @@ li {
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
+  font-weight: bold;
 }
 
 .next-question {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: bold;
 }
 
 .nextq-btn {
@@ -191,15 +191,14 @@ li {
   color: #5fbb97;
 }
 
-.points-container {
-  margin-top: 12vh;
-}
+
 
 .points-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 90vh;
 }
 
 .winner-logo {
@@ -209,14 +208,14 @@ li {
 }
 
 .point-text {
-  font-size: 2rem;
+  font-size: 2.25rem;
   text-align: center;
 }
 
 /* ------- Everything Else ---------- */
 .developer {
   text-align: center;
-  font-weight: 500;
+  font-weight: bold;
   margin-top: 2px;
   margin-left: 1rem;
   margin-right: 1rem;
