@@ -87,7 +87,7 @@ const nextquestion = () => {
     options.classList.add("options");
     questions.appendChild(options);
 
-    main_question.innerHTML = index + "). " + data[index - 1].question;
+    main_question.innerText = index + "). " + data[index - 1].question;
 
     if (data[index - 1].answers.answer_a !== null) {
       opbtn1 = document.createElement("button");

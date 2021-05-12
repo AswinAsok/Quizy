@@ -8,7 +8,7 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
-button{
+button {
   outline: none;
 }
 
@@ -120,7 +120,6 @@ li {
   margin-top: 1.5rem;
   align-items: center;
   text-align: center;
-  
 }
 
 .option-1,
@@ -155,26 +154,48 @@ li {
   font-size: 1.15rem;
 }
 
-.choosen{
+.choosen {
   background-color: #121420;
-  color: #5FBB97;
+  color: #5fbb97;
 }
 
-.points-box{
-  margin-top: 18vh;
+.points-container{
+  margin-top: 12vh;
+}
+
+.points-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
-.winner-logo{
-  height: 18rem;
+.winner-logo {
+  max-height: 22rem;
   width: 90vw;
   margin: 1rem;
 }
 
-.point-text{
+.point-text {
   font-size: 2rem;
   text-align: center;
+}
+
+/* ------- Everything Else ---------- */
+.developer {
+  text-align: center;
+  font-weight: 500;
+  margin-top: 2px ;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.source-code{
+  margin-top: 15px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
 }
