@@ -33,6 +33,7 @@ var opbtn2;
 var opbtn3;
 var opbtn4;
 var time;
+var interval;
 
 // -------- API Call Start --------
 
@@ -45,10 +46,9 @@ async function getdata(url) {
 // -------- API Call End --------
 
 const setTimer = () => {
-  var interval = setInterval(() => {
+  interval = setInterval(() => {
     time -= 1;
     if (time == 0) {
-      clearInterval(interval);
       nextquestion();
     }
   }, 1000);
@@ -56,7 +56,11 @@ const setTimer = () => {
 
 const nextquestion = () => {
   time = 16;
-  setTimer();
+  if (index < 10) {
+    clearInterval(interval);
+    setTimer();
+  }
+
   if (index >= 10) {
     questionscontainer.classList.add("hide");
     const points_container = document.querySelector(".points-container");
@@ -87,6 +91,7 @@ const nextquestion = () => {
 
   var timer = document.createElement("div");
   timer.classList.add("timer");
+
   setInterval(() => {
     timer.innerText = time;
   }, 1000);
