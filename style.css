@@ -17,8 +17,7 @@ button {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin-top: 5.5rem;
-  margin-bottom: 5vh;
+  min-height: 90vh;
 }
 
 .hide {
@@ -44,11 +43,12 @@ button {
   background-color: #403f4c;
   color: #5fbb97;
   padding: 13px;
+  font-weight: bold;
   width: 15rem;
   border: 0;
   border-radius: 15px;
   cursor: pointer;
-  font-size: 1.15rem;
+  font-size: 1.3rem;
 }
 
 /* ------------Rules CSS------------- */

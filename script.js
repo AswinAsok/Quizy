@@ -50,6 +50,7 @@ const nextquestion = () => {
     questionscontainer.classList.add("hide");
     const points_container = document.querySelector(".points-container");
     points_container.classList.remove("hide");
+    points_container.classList.add("w3-animate-opacity")
 
     const point_text = document.querySelector(".point-text");
     point_text.innerText = total + " Points";
