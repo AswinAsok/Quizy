@@ -4,6 +4,7 @@ const rulescontainer = document.querySelector(".rules-container");
 const hideheader = () => {
   nextbtn.parentElement.parentElement.classList.add("hide");
   rulescontainer.classList.remove("hide");
+  rulescontainer.classList.add("w3-animate-opacity");
 };
 
 nextbtn.addEventListener("click", hideheader);
@@ -44,12 +45,12 @@ async function getdata(url) {
 
 const nextquestion = () => {
   if (index >= 10) {
-    questionscontainer.classList.add("hide")
+    questionscontainer.classList.add("hide");
     const points_container = document.querySelector(".points-container");
-    points_container.classList.remove("hide")
+    points_container.classList.remove("hide");
 
-    const point_text = document.querySelector(".point-text")
-    point_text.innerText = total+" Points"
+    const point_text = document.querySelector(".point-text");
+    point_text.innerText = total + " Points";
     return;
   }
 
@@ -67,6 +68,7 @@ const nextquestion = () => {
 
   var question_box = document.createElement("div");
   question_box.classList.add("question-box");
+  question_box.classList.add("w3-animate-opacity");
   questions_container.appendChild(question_box);
 
   const q_box = document.createElement("div");
@@ -129,11 +131,17 @@ const nextquestion = () => {
 
     const next_question = document.createElement("div");
     next_question.classList.add("next-question");
+
     questions_container.appendChild(next_question);
 
     const nextq_btn = document.createElement("button");
+  
     nextq_btn.classList.add("nextq-btn");
-    nextq_btn.innerText = "Next Question";
+    if (index <= 9) {
+      nextq_btn.innerText = "Next Question";
+    }else{
+      nextq_btn.innerText = "Submit";
+    }
     nextq_btn.onclick = nextquestion;
     next_question.appendChild(nextq_btn);
   }
@@ -165,7 +173,4 @@ const calculate = (user_choice, button) => {
     total--;
     same_question = null;
   }
-
-
 };
-

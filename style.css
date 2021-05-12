@@ -8,6 +8,10 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
+button{
+  outline: none;
+}
+
 .head-container {
   display: flex;
   flex-direction: column;
@@ -18,6 +22,7 @@ body {
 }
 
 .hide {
+  transition: ease-out 20s;
   display: none;
 }
 
@@ -52,11 +57,8 @@ body {
   color: #5fbb97;
   min-height: 50vh;
   margin: 1.5rem;
-  margin-top: 5.5rem;
-  margin-bottom: 5vh;
-
+  margin-top: 10vh;
   border-radius: 30px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
