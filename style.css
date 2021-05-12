@@ -12,6 +12,7 @@ button {
   outline: none;
 }
 
+
 .head-container {
   display: flex;
   flex-direction: column;
@@ -55,8 +56,8 @@ button {
 .rule-box {
   background-color: #403f4c;
   color: #5fbb97;
-  min-height: 50vh;
-  margin: 2rem;
+  
+  margin: 1rem;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -65,11 +66,12 @@ button {
 
 .rule-title {
   font-size: 3rem;
-  margin-top: 2.5rem;
+  margin-top: 1rem;
 }
 
 .instructions {
-  margin: 1.5rem;
+  margin: 1rem;
+  border-bottom: 1px solid #5FBB97;
 }
 
 li {
@@ -80,27 +82,44 @@ li {
 .startbtn {
   background-color: #5fbb97;
   color: #403f4c;
-  padding: 13px;
+  padding: 10px;
   width: 15rem;
   border: 0;
   border-radius: 15px;
   cursor: pointer;
   font-size: 1.15rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .category-btn {
   background-color: #5fbb97;
   color: #403f4c;
-  width: 6rem;
+  width: 7rem;
   height: 3rem;
   text-align: center;
   border: 0;
   border-radius: 15px;
   cursor: pointer;
   font-size: 1rem;
+  margin: 0.1rem;
+  
+  justify-content: center;
+}
+
+.category{
+  display: flex;
+  flex-direction: column;
+  
   margin-bottom: 2.5rem;
   justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #5FBB97;
+}
+
+.category-title{
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 /* --------------- Questions --------------- */

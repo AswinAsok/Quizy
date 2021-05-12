@@ -180,13 +180,34 @@ const calculate = (user_choice, button) => {
 // -------- Category Buttons----------
 const javascript_btn = document.querySelector(".cjs");
 javascript_btn.onclick = () => {
+  highlight_cate();
   category = "javascript";
+  javascript_btn.classList.add("choosen");
+  console.log(javascript_btn)
 };
+
 const html_btn = document.querySelector(".chtml");
 html_btn.onclick = () => {
+  highlight_cate();
   category = "html";
+  html_btn.classList.add("choosen");
 };
+
 const linux_btn = document.querySelector(".clinux");
 linux_btn.onclick = () => {
+  highlight_cate();
   category = "linux";
+  linux_btn.classList.add("choosen");
+};
+
+const highlight_cate = () => {
+  if (javascript_btn && javascript_btn.classList.contains("choosen")) {
+    javascript_btn.classList.remove("choosen");
+  }
+  else if (html_btn && html_btn.classList.contains("choosen")) {
+    html_btn.classList.remove("choosen");
+  }
+  else if (linux_btn && linux_btn.classList.contains("choosen")) {
+    linux_btn.classList.remove("choosen");
+  }
 };
